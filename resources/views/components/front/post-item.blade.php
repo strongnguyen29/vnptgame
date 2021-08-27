@@ -14,7 +14,7 @@
         <h5 class="card-title text-truncate">
             <a href="{{ $post->url }}">{{ $post->title ?? '' }}</a>
         </h5>
-        <p class="card-text">{{ $post->desc ? Str::words($post->desc, 24) : '' }}</p>
+        <p class="card-text">{{ $post->desc ? Str::words($post->desc, 18) : '' }}</p>
         <a href="{{ $post->url }}" class="btn btn-outline-primary rounded-pill" role="button">{{ __('Chi tiết') }}</a>
     </div>
 </div>

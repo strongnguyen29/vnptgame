@@ -43,7 +43,7 @@ class PostRepository extends BaseRepository implements PostInterface
         $key = $this->getCacheKey('latest_' . $limit);
 
         return Cache::remember($key, self::CACHE_TIME, function () use ($limit) {
-            return $this->query()->latest()->take($limit)->get();
+            return $this->query()->latest()->take($limit)->get($this->getColumnNameLite());
         });
     }
 
@@ -64,5 +64,49 @@ class PostRepository extends BaseRepository implements PostInterface
     public function findBySlug($slug)
     {
         return $this->query()->slug($slug)->firstOrFail();
+    }
+
+    /**
+     * Tin lien quan
+     *
+     * @param int $limit
+     * @param $categoryIds
+     * @return Collection
+     */
+    public function getRelatedPosts($categoryIds, $limit = 6)
+    {
+        return $this->query()
+            ->whereHas('categories', function ($query) use ($categoryIds) {
+                $query->whereIn('id', $categoryIds);
+            })
+            ->latest()
+            ->take($limit)
+            ->get($this->getColumnNameLite());
+    }
+
+    /**
+     * Phan trang tin tuc
+     *
+     * @param int $categoryId
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function paginationWithCategory($categoryId = 0) {
+        $query = $this->query();
+        if ($categoryId) {
+            $query->whereHas('categories', function ($query) use ($categoryId) {
+                $query->where('id', $categoryId);
+            });
+        }
+
+        return $query->paginate(18, $this->getColumnNameLite());
+    }
+
+    /**
+     * Lay cac thuoc tinh cho danh sach dai
+     *
+     * @return string[]
+     */
+    protected function getColumnNameLite() {
+        return ['id', 'title', 'slug', 'desc', 'active', 'language', 'created_at'];
     }
 }

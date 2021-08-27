@@ -40,6 +40,37 @@ return [
                 ]
             ]
         ],[
+            'type' => 'treeview',
+            'title' => 'Tuyển dụng',
+            'icon' => 'fas fa-address-card',
+            'items' => [
+                [
+                    'type' => 'item',
+                    'title' => 'Danh sách',
+                    'route' => 'admin.recruitments.index',
+                    'gate' => 'list recruitments'
+                ],
+                [
+                    'type' => 'item',
+                    'title' => 'Danh sách ứng tuyển',
+                    'route' => 'admin.recruitments.applies',
+                    'gate' => 'list recruitments'
+                ],
+                [
+                    'type' => 'item',
+                    'title' => 'Thêm mới',
+                    'route' => 'admin.recruitments.create',
+                    'gate' => 'add recruitments'
+                ],
+                [
+                    'type' => 'item',
+                    'title' => 'Danh mục',
+                    'route' => 'admin.recruitments.categories',
+                    'routeData' => ['type' => \App\Models\Category::TYPE_RECRUIT],
+                    'gate' => 'categories recruitments'
+                ],
+            ]
+        ],[
             'type' => 'header',
             'title' => 'TÀI KHOẢN'
         ],[
@@ -95,8 +126,8 @@ return [
             'label' => 'Bài viết',
             'actions' => ['list', 'add', 'edit', 'publish', 'del', 'categories']
         ],
-        'projects' => [
-            'label' => 'Công trình',
+        'recruitments' => [
+            'label' => 'Tuyển dụng',
             'actions' => ['list', 'add', 'edit', 'publish','del', 'categories']
         ],
     ]

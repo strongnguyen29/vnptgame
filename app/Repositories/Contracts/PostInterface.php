@@ -24,4 +24,21 @@ interface PostInterface
      * @return Post|null
      */
     public function findBySlug($slug);
+
+    /**
+     * Tin lien quan
+     *
+     * @param int $limit
+     * @param $categoryIds
+     * @return Collection
+     */
+    public function getRelatedPosts($categoryIds, $limit = 6);
+
+    /**
+     * Phan trang tin tuc
+     *
+     * @param int $categoryId
+     * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+     */
+    public function paginationWithCategory($categoryId = 0);
 }

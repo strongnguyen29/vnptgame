@@ -1,6 +1,6 @@
-<section class="newsevent">
+<section class="newsevent {{ $sectionClass ?? '' }}">
     <div class="container">
-        <h3 class="text-center">Tin tức - Sự kiện<span class="fake">.</span></h3>
+        <h3 class="text-center">{{ __('Tin tức - Sự kiện') }}<span class="fake">.</span></h3>
         <div class="cactin">
             @foreach($posts as $post)
                 <x-front.post-item :post="$post" />

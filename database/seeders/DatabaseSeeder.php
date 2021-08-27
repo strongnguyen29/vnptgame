@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Project;
+use App\Models\Recruitment;
+use App\Models\RecruitmentApply;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
@@ -21,10 +23,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
         $this->call(InstallSeeder::class);
+
         $this->createCategories();
         $this->createNews();
+        $this->createRecruitments();
     }
 
     /**
@@ -35,7 +38,13 @@ class DatabaseSeeder extends Seeder
             'Tin tức' => [
                 'type' => Category::TYPE_POST,
             ],
-            'Tuyển dụng' => [
+            'Technology' => [
+                'type' => Category::TYPE_RECRUIT,
+            ],
+            'Sale / Marketing' => [
+                'type' => Category::TYPE_RECRUIT,
+            ],
+            'Product / Designer' => [
                 'type' => Category::TYPE_RECRUIT,
             ],
         ];
@@ -63,8 +72,21 @@ class DatabaseSeeder extends Seeder
         }
     }
 
+    /**
+     *
+     */
     protected function createNews() {
         Post::factory()->count(20)->create();
+    }
+
+    /**
+     * @throws \Exception
+     */
+    protected function createRecruitments() {
+        Recruitment::factory()
+            ->has(RecruitmentApply::factory()->count(random_int(1, 10)), 'applies')
+            ->count(10)
+            ->create();
     }
 }
 

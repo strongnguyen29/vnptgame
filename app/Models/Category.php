@@ -171,7 +171,7 @@ class Category extends Model implements HasMedia
      * @param $lang
      * @return mixed
      */
-    public static function getTreeByLanguage($lang) {
+    public static function getTreeByLanguage($lang, $type = Category::TYPE_POST) {
         return Category::with([
                 'children' => function ($query) use ($lang) {
                     $query->language($lang);
@@ -183,7 +183,7 @@ class Category extends Model implements HasMedia
             ->language($lang)
             ->where('parent_id', 0)
             ->orWhereNull('parent_id')
-            ->type(Category::TYPE_POST)
+            ->type($type)
             ->get();
     }
 }

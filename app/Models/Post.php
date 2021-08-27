@@ -2,18 +2,15 @@
 
 namespace App\Models;
 
+use App\Models\Traits\HasSlug;
+use App\Models\Traits\HasThumb;
 use App\Models\Traits\HasTranslations;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
-use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Exceptions\FileDoesNotExist;
-use Spatie\MediaLibrary\MediaCollections\Exceptions\FileIsTooBig;
 use Spatie\Tags\HasTags;
 
 /**
@@ -32,7 +29,7 @@ use Spatie\Tags\HasTags;
  */
 class Post extends Model implements HasMedia
 {
-    use HasFactory, HasTags, InteractsWithMedia, HasTranslations;
+    use HasFactory, HasTags, HasThumb, HasTranslations, HasSlug;
 
     const MEDIA_COLLECT = 'post_thumb';
 
@@ -55,24 +52,10 @@ class Post extends Model implements HasMedia
     protected $appends = ['url', 'thumb'];
 
     /**
-     * @param $value
-     */
-    public function setSlugAttribute($value) {
-        $this->attributes['slug'] = Str::slug($value ?? $this->title);
-    }
-
-    /**
      * @return string
      */
     public function getUrlAttribute() {
         return $this->slug ? route('front.posts.detail', ['slug' => $this->slug]) : '';
-    }
-
-    /**
-     * @return \Spatie\MediaLibrary\MediaCollections\Models\Media|null
-     */
-    public function getThumbAttribute() {
-        return $this->getFirstMedia(self::MEDIA_COLLECT);
     }
 
     /**
@@ -98,60 +81,5 @@ class Post extends Model implements HasMedia
      */
     public function scopeActive($query, $active = true) {
         return $query->where('active', $active);
-    }
-
-    /**
-     * @param Builder $query
-     * @param $slug
-     * @return Builder
-     */
-    public function scopeSlug($query, $slug) {
-        return $query->where('slug', $slug);
-    }
-
-    /**
-     * Dang ky media collections
-     */
-    public function registerMediaCollections(): void
-    {
-        $this->addMediaCollection(self::MEDIA_COLLECT)
-            ->withResponsiveImages()
-            ->singleFile();
-    }
-
-    /**
-     * Set image thumb
-     *
-     * @param $file
-     */
-    public function setImage($file) {
-
-        try {
-            $this->addMedia($file)
-                ->setFileName(sprintf('%s.%s', $this->slug, $file->getClientOriginalExtension()))
-                ->toMediaCollection(self::MEDIA_COLLECT);
-        } catch (FileDoesNotExist | FileIsTooBig $e) {
-            Log::error('setImage post error: ' . $e->getMessage());
-        }
-    }
-
-    /**
-     *
-     * @param array $attrs
-     * @return \Spatie\MediaLibrary\MediaCollections\HtmlableMedia|\Spatie\MediaLibrary\MediaCollections\Models\Media|null
-     */
-    public function getImageHtml(array $attrs = []) {
-        $media = $this->getFirstMedia(self::MEDIA_COLLECT);
-
-        return $media ? $media->img('', $attrs) : null;
-    }
-
-    /**
-     * @return string
-     */
-    public function getImageUrl() {
-        $media = $this->getFirstMedia(self::MEDIA_COLLECT);
-
-        return $media ? $media->getFullUrl() : '';
     }
 }

@@ -1,6 +1,6 @@
 <section class="doitac">
     <div class="container">
-        <h3 class="text-center">Đối tác của chúng tôi<span class="fake">.</span></h3>
+        <h3 class="text-center">{{ __('Đối tác của chúng tôi') }}<span class="fake">.</span></h3>
         <div class="alldoitac"  data-aos="fade-up" data-aos-duration="800">
             <div class="card" style="">
                 <div class="doitacshow">

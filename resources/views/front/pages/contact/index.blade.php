@@ -10,15 +10,8 @@
 
                 <div class="row main-content">
                     <div class="col-md-5 col-12">
-                        <h5>TỔNG CÔNG TY TRUYỀN THÔNG (VNPT-MEDIA)
-                            <span>CÔNG TY VNPT GAME</span>                  </h5>
-                        <p>
-                            Tòa nhà VNPT, số 57 Huỳnh Thúc Kháng,<br>
-                            Q. Đống Đa, Hà Nội, Việt Nam<br>
-                            024 3772 2728<br>
-                            024 3772 2733<br>
-                            vnptgame@vnpt.vn
-                        </p>
+                        <h5>{!! __('contact.company') !!}</h5>
+                        <p>{!! __('contact.address') !!}</p>
                     </div>
                     <div class="col-md-7 col-12">
                         <div id="map"></div>

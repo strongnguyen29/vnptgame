@@ -21,7 +21,7 @@
                 <x-front.nav-item route-name="front.about" title="{{ __('Về chúng tôi') }}" />
                 <x-front.nav-item route-name="front.services" title="{{ __('Dịch vụ') }}" />
                 <x-front.nav-item route-name="front.posts.index" title="{{ __('Tin tức') }}" />
-                <x-front.nav-item route-name="front.recruitment.index" title="{{ __('Tuyển dụng') }}" />
+                <x-front.nav-item route-name="front.recruitments.index" title="{{ __('Tuyển dụng') }}" />
                 <x-front.nav-item route-name="front.contact" title="{{ __('Liên hệ') }}" />
 
                 @include('front.layouts.language')

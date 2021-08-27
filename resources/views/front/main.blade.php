@@ -34,6 +34,8 @@
         gtag('config', '{{ option('ga_code', config('options.ga_code.value')) }}');
     </script>
 
+    {!! RecaptchaV3::initJs() !!}
+
     @stack('head_end')
 </head>
 <body class="@stack('body_class')" data-aos-easing="ease-in-out-sine" data-aos-duration="400" data-aos-delay="00">

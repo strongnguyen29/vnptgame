@@ -20,7 +20,7 @@
             <thead>
             <tr class="text-nowrap">
                 <th>ID</th>
-                <th>Img</th>
+                <th>Ảnh</th>
                 <th>Tiêu đề</th>
                 <th>Danh mục</th>
                 <th>Active</th>
@@ -34,7 +34,7 @@
 
                 <tr>
                     <td>{{ $post->id }}</td>
-                    <td>{{ $post->getImageHtml(['class' => 'img-thumbnail', 'style' => 'width: 72px']) ?? 'No image' }}</td>
+                    <td>{{ $post->getImageHtml(['class' => 'img-thumbnail', 'style' => 'width: 64px']) ?? 'No image' }}</td>
                     <td class="font-weight-semi-bold">{{ $post->title }}</td>
                     <td>{{ $post->categories->count() > 0 ? $post->categories->pluck('title')->join(', ') : 'Empty' }}</td>
                     <td>
@@ -66,15 +66,5 @@
         {!! $posts->withQueryString()->links() !!}
     </div>
 @endsection
-
-@push('body_end')
-    <script>
-        $(function () {
-            $('#selectLanguage').change(function () {
-                $('#formLanguageChange').submit();
-            })
-        })
-    </script>
-@endpush
 
 

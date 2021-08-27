@@ -23,12 +23,14 @@ Route::get('/dich-vu', [App\Http\Controllers\Frontend\HomeController::class, 'ou
 
 Route::get('/lien-he', [App\Http\Controllers\Frontend\HomeController::class, 'contactUs'])->name('contact');
 
-Route::get('/tin-tuc', [App\Http\Controllers\Frontend\PostController::class, 'index'])->name('posts.index');
-
-Route::get('/tuyen-dung', [App\Http\Controllers\Frontend\RecruitmentController::class, 'index'])->name('recruitment.index');
-
 // Posts
+Route::get('/tin-tuc', [App\Http\Controllers\Frontend\PostController::class, 'index'])->name('posts.index');
 Route::get('/tin-tuc/{slug}', [App\Http\Controllers\Frontend\PostController::class, 'postDetail'])->name('posts.detail');
+
+// Tuyen dung
+Route::get('/tuyen-dung', [App\Http\Controllers\Frontend\RecruitmentController::class, 'index'])->name('recruitments.index');
+Route::get('/tuyen-dung/{slug}', [App\Http\Controllers\Frontend\RecruitmentController::class, 'detail'])->name('recruitments.detail');
+Route::post('/tuyen-dung/apply', [App\Http\Controllers\Frontend\RecruitmentController::class, 'storeApply'])->name('recruitments.apply');
 
 Route::get('language-change', [\App\Http\Controllers\Frontend\HomeController::class, 'languageChange'])->name('languageChange');
 

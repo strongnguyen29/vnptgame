@@ -64,7 +64,7 @@ class PostController extends BackendController
         $request->validate([
             'categories' => 'required|array',
             'title' => 'required|string|min:3|max:255',
-            'slug' => 'required|string|min:3|max:255',
+            'slug' => 'required|string|unique:App\Models\Post,slug',
             'desc' => 'nullable|string',
             'content' => 'nullable|string',
             'meta_title' => 'nullable|string',
@@ -133,7 +133,7 @@ class PostController extends BackendController
         $request->validate([
             'categories' => 'required|array',
             'title' => 'required|string|min:3|max:255',
-            'slug' => 'required|string|min:3|max:255',
+            'slug' => 'required|string|unique:App\Models\Post,slug,' . $post->id,
             'desc' => 'nullable|string',
             'content' => 'nullable|string',
             'meta_title' => 'nullable|string',

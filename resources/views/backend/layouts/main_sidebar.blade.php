@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="{{ route('admin.dashboard') }}" class="brand-link">
-        <span class="brand-text font-weight-light"><b>QUYEN ANH</b> CMS</span>
+        <span class="brand-text font-weight-light"><b>VNPT GAME</b> CMS</span>
     </a>
 
     <!-- Sidebar -->
