@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light topnav fixed-top navvnpt">
     <div class="search-inline off">
         <form id="searchForm">
-            <input type="text" class="form-control1 input_search" name="key" placeholder="Tìm kiếm...">
+            <input type="text" class="form-control1 input_search" name="key" placeholder="{{ __('Tìm kiếm...') }}">
             <button type="submit" class="btn_search">
                 <i class="fa fa-search"></i>
             </button>
@@ -11,7 +11,7 @@
         </form>
     </div>
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="{{ asset('images/logo.png') }}" alt="menu-btn"/></a>
+        <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('images/logo.png') }}" alt="menu-btn"/></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

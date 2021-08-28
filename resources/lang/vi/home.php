@@ -23,5 +23,10 @@ return [
         'img1' => 'kn1.png',
         'img2' => 'kn2.png',
         'img3' => 'kn3.png',
+    ],
+    'footer' => [
+        'chung_nhan_kd' => 'Giấy chứng nhận đăng ký doanh nghiệp số: 0106873188 <br>
+                    Do Sở KH&ĐT Hà nội cấp ngày: 06/08/2021',
+        'address' => 'Tòa nhà VNPT, số 57 Huỳnh Thúc Kháng, Q. Đống Đa, Hà Nội, Việt Nam'
     ]
 ];

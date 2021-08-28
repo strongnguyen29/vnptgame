@@ -1,4 +1,4 @@
-<h3 class="text-center">{{ 'Vì sao bạn chọn chúng tôi' }}<span class="fake">.</span></h3>
+
 <div class="row justify-content-center">
     <div class="col-md-4 col-12">
         <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">

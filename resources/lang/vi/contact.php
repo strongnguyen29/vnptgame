@@ -8,5 +8,6 @@ return [
                             Q. Đống Đa, Hà Nội, Việt Nam<br>
                             024 3772 2728<br>
                             024 3772 2733<br>
-                            vnptgame@vnpt.vn'
+                            vnptgame@vnpt.vn',
+
 ];

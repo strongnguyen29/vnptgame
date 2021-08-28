@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class DashboardController extends BackendController
@@ -13,6 +14,9 @@ class DashboardController extends BackendController
      */
     public function index(Request $request) {
         $this->setPageData('Dashboard');
+
+
+
         return view('backend.pages.dashboard.index', $this->getViewData());
     }
 }

@@ -8,6 +8,8 @@
 
                 <x-front.breadcrumb />
 
+                <h3 class="text-center">{{ __('Vì sao bạn chọn chúng tôi') }}<span class="fake">.</span></h3>
+
                 @include('front.pages.recruitment.components.index_desc')
 
                 <h3 class="text-center">{{ __('Các vị trí đang tuyển') }}<span class="fake">.</span></h3>
