@@ -11,7 +11,6 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.copyDirectory('resources/images', 'public/images');
 
 // Backend
 mix.js('resources/backend/js/app.js', 'public/backend/js')

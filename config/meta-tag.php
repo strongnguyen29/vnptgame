@@ -8,11 +8,11 @@ return [
        |
        */
 
-    'title' => 'Nội thất Quyền Anh',
+    'title' => 'VNPT Game',
 
-    'append_title' => 'Thiết kế thi công nội thất | công ty Nội thất Quyền Anh',
+    'append_title' => 'VNPT Game | Giải trí và cuộc sống',
 
-    'description' => 'Nội thất Quyền Anh tự hào là đơn vị thiết kế và thi công nội thất uy tín hàng đầu tại Việt Nam. Kiến trúc ngoại thất tất cả tại Hà Nội, HCM và các tỉnh trên toàn quốc',
+    'description' => 'VNPT Game | Giải trí và cuộc sống',
 
     /*
      |--------------------------------------------------------------------------

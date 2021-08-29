@@ -34,3 +34,6 @@ Route::post('/tuyen-dung/apply', [App\Http\Controllers\Frontend\RecruitmentContr
 
 Route::get('language-change', [\App\Http\Controllers\Frontend\HomeController::class, 'languageChange'])->name('languageChange');
 
+Route::get('test', function () {
+    echo exec('whoami');
+});
