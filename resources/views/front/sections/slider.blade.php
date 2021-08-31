@@ -2,8 +2,11 @@
     <div id="carouselSliders" class="carousel slide" data-bs-ride="carousel" >
 
         <div class="carousel-inner">
-            @for($i = 1; $i < 5;$i++)
+            @for($i = 1; $i < 4;$i++)
             <div class="carousel-item {{ $i == 1 ? 'active' : '' }}">
+                <div class="carousel-caption container d-md-block">
+                    {!! __('home.slide_caption') !!}
+                </div>
                 <img src="{{ asset('images/slider'. $i .'.jpg') }}" class="bannerdesktop d-block w-100" alt="slide">
             </div>
             @endfor

@@ -44,8 +44,10 @@ body { background: #fff; font-family: "Roboto", sans-serif; font-size: 14px; fon
 .navvnpt { background: #fff; }
 
 .topnav { padding-top: 0; padding-bottom: 0; }
-.topnav .nav-link { font-size: 14px; text-transform: uppercase; font-family: ABold, Roboto Condensed, Roboto, Arial, serif; color: #3674b8 !important; padding-top: 1.5rem; padding-bottom: 1.5rem; margin-bottom: 5px; text-align: center; }
-.topnav .nav-link:hover, .topnav .nav-link.active { background: #3674b8; color: #fff !important; border-bottom: 2px solid #d4c458; }
+.topnav .navbar-brand img { max-width: 80%; }
+.topnav .nav-item .nav-link { font-size: 14px; text-transform: uppercase; font-family: Avo, Roboto Condensed, Roboto, Arial, serif; color: #3674b8 !important; padding-top: 1.5rem; padding-bottom: 1.5rem; margin-bottom: 5px; text-align: center; padding-left: 0.8rem !important; padding-right: 0.8rem !important; }
+.topnav .nav-item .nav-link:hover, .topnav .nav-item .nav-link.active { background: #3674b8; color: #fff !important; border-bottom: 2px solid #d4c458; }
+.topnav .dropdown { margin-left: 1.4rem !important; }
 .topnav .changelg { padding: 0.4rem !important; align-items: center !important; margin-top: 1.1rem; }
 .topnav .navbar #lg { color: #333; }
 .topnav .drlg { top: 3.2rem; }
@@ -83,6 +85,9 @@ body { background: #fff; font-family: "Roboto", sans-serif; font-size: 14px; fon
 .search-open:hover { color: #fff; }
 
 .slider { position: relative; z-index: 1; }
+.slider .carousel-caption { bottom: 7.25rem !important; }
+.slider .carousel-caption h2, .slider .carousel-caption h4 { font-size: 50px; font-family: ABold, Roboto, sans-serif; text-transform: uppercase; text-align: left; text-shadow: 1px 1px 10px #000; }
+.slider .carousel-caption h4 { font-size: 25px; }
 
 .gioithieu { background: #f6f6f6; position: relative; z-index: 2; }
 .gioithieu .runout { top: -13vh; position: relative; background: #fff; padding-top: 2rem; margin-bottom: -10vh; }
@@ -90,7 +95,7 @@ body { background: #fff; font-family: "Roboto", sans-serif; font-size: 14px; fon
 .gioithieu .runout h3 .fake { display: block; width: 50px; height: 4px; background: #fde000; margin: 0.5rem auto 1rem; text-indent: -99999px; }
 .gioithieu .runout .card { margin-bottom: 0.5rem; border-radius: 0px; border: none; }
 .gioithieu .runout .card .card-title { font-family: Roboto, serif; font-weight: 700; text-transform: uppercase; font-size: 20px; color: #fff; }
-.gioithieu .runout .card .ttngan { padding-top: 1.55rem; }
+.gioithieu .runout .card .ttngan { padding-bottom: 1.55rem; }
 .gioithieu .runout .card .card-text { color: #fff; font-size: 16px; }
 .gioithieu .runout .mau1 { background: #efefef; }
 .gioithieu .runout .mau1 .card-title { color: #3674b8; }
@@ -110,10 +115,10 @@ body { background: #fff; font-family: "Roboto", sans-serif; font-size: 14px; fon
 .newsevent .cactin .card { background: transparent; border: none; border-radius: 0; }
 .newsevent .cactin .card .card-body { padding-left: 0; padding-right: 0; }
 .newsevent .cactin .card .card-body .datetime { font-family: Avo, Roboto, serif; font-size: 12px; color: #7b7b7b; }
-.newsevent .cactin .card .card-body .card-title { font-family: ABold, Roboto, serif; font-size: 15px; margin: 1rem 0; }
+.newsevent .cactin .card .card-body .card-title { font-family: ABold, Roboto, serif; font-size: 15px; margin: 1rem 0; min-height: 36px; -webkit-line-clamp: 2; line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
 .newsevent .cactin .card .card-body .card-title a { color: #3674b8; }
 .newsevent .cactin .card .card-body .card-title a:hover { text-decoration: underline; }
-.newsevent .cactin .card .card-body .card-text { font-family: Avo, Roboto, serif; font-size: 15px; color: #333c45; }
+.newsevent .cactin .card .card-body .card-text { font-family: Avo, Roboto, serif; font-size: 15px; color: #333c45; -webkit-line-clamp: 3; min-height: 66px; line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
 .newsevent .cactin .card .card-body .btn { font-family: Avo, Roboto, serif; font-size: 13px; border-color: #3674b8; padding-left: 2rem; padding-right: 2rem; }
 .newsevent .cactin .slick-slide { margin: 0 10px; }
 .newsevent .cactin .slick-slide .gift { color: #04aa46; }
@@ -151,10 +156,10 @@ footer .footbot p { font-family: Avo, Roboto, serif; font-size: 15px; margin-bot
 .gt .cactin .card { background: transparent; border: none; border-radius: 0; }
 .gt .cactin .card .card-body { padding-left: 0; padding-right: 0; }
 .gt .cactin .card .card-body .datetime { font-family: Avo, Roboto, serif; font-size: 12px; color: #7b7b7b; }
-.gt .cactin .card .card-body .card-title { font-family: ABold, Roboto, serif; font-size: 15px; margin: 1rem 0; }
+.gt .cactin .card .card-body .card-title { font-family: ABold, Roboto, serif; font-size: 15px; margin: 1rem 0; -webkit-line-clamp: 2; min-height: 36px; line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
 .gt .cactin .card .card-body .card-title a { color: #3674b8; }
 .gt .cactin .card .card-body .card-title a:hover { text-decoration: underline; }
-.gt .cactin .card .card-body .card-text { font-family: Avo, Roboto, serif; font-size: 15px; color: #333c45; }
+.gt .cactin .card .card-body .card-text { font-family: Avo, Roboto, serif; font-size: 15px; color: #333c45; -webkit-line-clamp: 3; min-height: 66px; line-clamp: 3; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
 .gt .cactin .card .card-body .btn { font-family: Avo, Roboto, serif; font-size: 13px; border-color: #3674b8; padding-left: 2rem; padding-right: 2rem; }
 .gt .cactin .slick-slide { margin: 0 10px; }
 .gt .cactin .slick-slide .gift { color: #04aa46; }
@@ -174,7 +179,7 @@ footer .footbot p { font-family: Avo, Roboto, serif; font-size: 15px; margin-bot
 .tintuc .gt .tinkhac .cactin .card .card-body .btn { border: none; text-align: left; padding: 0; color: #3674b8; text-decoration: underline; }
 
 .tuyendung .gt .runout .card img { max-width: 100% !important; margin: 0 auto; width: auto !important; display: block; }
-.tuyendung .gt .runout .card .card-title { color: #3674b8; }
+.tuyendung .gt .runout .card .card-title { color: #3674b8; -webkit-line-clamp: 2; line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
 .tuyendung .gt .runout .card p { color: #333333; }
 .tuyendung .gt .runout .navbar { margin-bottom: 1.5rem; }
 .tuyendung .gt .runout .navbar .customnav { box-shadow: 1px 1px 6px #a2a2a2; border-radius: 100px; }
@@ -185,7 +190,7 @@ footer .footbot p { font-family: Avo, Roboto, serif; font-size: 15px; margin-bot
 .tuyendung .gt .runout .tab-content .card .card-body { border: 1px solid #efefef; box-shadow: 1px 1px 10px #c1c1c1; border-radius: 8px; }
 .tuyendung .gt .runout .tab-content .card .card-body h5 span.title-small { font-size: 16px; color: #6b6b6b; display: block; text-transform: none; font-style: italic; }
 .tuyendung .gt .runout .tab-content .card .card-body h5 .fake { margin: 0.5rem auto 1rem; background: #facb00; }
-.tuyendung .gt .runout .tab-content .card .card-body .card-text { text-align: left; font-size: 14px; line-height: 24px; }
+.tuyendung .gt .runout .tab-content .card .card-body .card-text { text-align: left; font-size: 14px; line-height: 24px; -webkit-line-clamp: 2; min-height: 48px; line-clamp: 2; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
 .tuyendung .gt .runout .tab-content .card .card-body .deadline { color: #000; text-align: left; font-size: 14px; font-weight: 700; margin: 2.5rem 0 2rem; }
 .tuyendung .gt .runout .tab-content .card .card-body a.btn { border-radius: 100px; text-transform: uppercase; color: #fff; background: #ed7e01; box-shadow: 1px 1px 10px #f2f2f2; border: none; font-size: 12px; padding: 0.5rem 2rem; }
 .tuyendung .gt .runout .tab-content .pagi { margin-top: 3rem; }
@@ -227,5 +232,20 @@ h5 a { color: #1c1e2b; }
 
 @media (max-width: 1024px) { .slider { position: relative; z-index: 1; margin-top: 75px; }
   .gioithieu .runout { margin-bottom: 0; top: 0; }
-  .gioithieu { overflow: hidden; } }
-@media (max-width: 767px) { .gioithieu { overflow: hidden; } }
+  .gioithieu { overflow: hidden; }
+  .slider { position: relative; z-index: 1; }
+  .slider .carousel-caption { bottom: 0.5rem !important; }
+  .slider .carousel-caption h2, .slider .carousel-caption h4 { font-size: 50px; }
+  .slider .carousel-caption h4 { font-size: 25px; }
+  .topnav .dropdown { margin-left: 0 !important; } }
+@media (max-width: 768px) { .gioithieu { overflow: hidden; }
+  .slider { position: relative; z-index: 1; }
+  .slider .carousel-caption { bottom: 0.5rem !important; padding-bottom: 0rem; }
+  .slider .carousel-caption h2, .slider .carousel-caption h4 { font-size: 25px; }
+  .slider .carousel-caption h4 { font-size: 12px; } }
+@media (max-width: 415px) { .slider { position: relative; z-index: 1; }
+  .slider .carousel-caption { bottom: 0.5rem !important; }
+  .slider .carousel-caption h2, .slider .carousel-caption h4 { font-size: 14px; }
+  .slider .carousel-caption h4 { font-size: 10px; }
+  .navbar-light .navbar-brand { width: 70%; padding-top: 0.9rem; } }
+@media (max-width: 320px) { .slider { margin-top: 54px; } }

@@ -1,5 +1,8 @@
 <?php
 return [
+    'slide_caption' => '<h4>Cung cấp các giải pháp</h4>
+                    <h2>Nền tảng giải trí số <br>và trò chơi trực tuyến</h2>
+                    <h4>trên thị trường việt nam và quốc tế</h4>',
 
     'game' => [
         'title' => 'Phát Hành Game',
@@ -7,7 +10,7 @@ return [
     ],
     'e_sport' => [
         'title' => 'eSport',
-        'content' => 'Một hệ thống giải đấu online/offline xuyên suốt trên phạm vi toàn quốc,cạnh tranh và hấp dẫn'
+        'content' => 'Một hệ thống giải đấu online/offline xuyên suốt trên phạm vi toàn quốc, cạnh tranh và hấp dẫn'
     ],
 
     'cong_dong' => [

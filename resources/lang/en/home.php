@@ -1,6 +1,8 @@
 <?php
 return [
-
+    'slide_caption' => '<h4>Provide solutions of </h4>
+                    <h2>digital entertainment<br/>platforms and online games</h2>
+                    <h4> to vietnammese and international markets</h4>',
     'game' => [
         'title' => 'Game release',
         'content' => 'With a team of experience personnel, VNPT Game releases games with a variety of content and platforms'

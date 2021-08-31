@@ -10,8 +10,6 @@
 
                 <h3 class="text-center">{{ __('Tin Tức') }}<span class="fake">.</span></h3>
 
-                @include('front.pages.post.components.index_categories')
-
                 <div class="row cactin">
 
                     @if($posts->total() > 0)
